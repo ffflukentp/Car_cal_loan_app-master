@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:html';
-
 import 'package:cal_car_loan_app/views/home_ui.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -158,7 +157,7 @@ class _IntroductionUIState extends State<IntroductionUI> {
         ],
         showSkipButton: true,
         skip: Text(
-          'skip',
+          'Skip',
           style: GoogleFonts.kanit(
             fontSize: MediaQuery.of(context).size.width * 0.04,
             color: Colors.deepOrange,
@@ -169,51 +168,47 @@ class _IntroductionUIState extends State<IntroductionUI> {
             context,
             MaterialPageRoute(
               builder: (context) => HomeUI(),
-            
-          ),
-        );
-      },
-      dotsDecorator: DotsDecorator(
-        size: Size(
-          MediaQuery.of(context).size.width * 0.025,
-          MediaQuery.of(context).size.width * 0.025,
-
-        ),
-        color: Colors.grey,
-        activeSize: Size(
-          MediaQuery.of(context).size.width * 0.055,
-          MediaQuery.of(context).size.width * 0.025,
-        ),
-        activeColor: Colors.deepOrange,
-        activeShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(25.0),
-          ),
-        ),
-      ),
-      next: Icon(
-        Icons.arrow_forward,
-        color: Colors.deepOrange,
-      ),
-      nextFlex: 0,
-      done: Text(
-        'getting start',
-        style: GoogleFonts.kanit(
-          fontSize: MediaQuery.of(context).size.width * 0.04,
-          color: Colors.deepOrange,
-
-        ),
-      ),
-      onDone: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => HomeUI(),
-          ),
-          
+            ),
           );
-      },
-     ),
+        },
+        dotsDecorator: DotsDecorator(
+          size: Size(
+            MediaQuery.of(context).size.width * 0.025,
+            MediaQuery.of(context).size.width * 0.025,
+          ),
+          color: Colors.grey,
+          activeSize: Size(
+            MediaQuery.of(context).size.width * 0.055,
+            MediaQuery.of(context).size.width * 0.025,
+          ),
+          activeColor: Colors.deepOrange,
+          activeShape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(25.0),
+            ),
+          ),
+        ),
+        next: Icon(
+          Icons.arrow_forward,
+          color: Colors.deepOrange,
+        ),
+        nextFlex: 0,
+        done: Text(
+          'Getting Start',
+          style: GoogleFonts.kanit(
+            fontSize: MediaQuery.of(context).size.width * 0.04,
+            color: Colors.deepOrange,
+          ),
+        ),
+        onDone: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomeUI(),
+            ),
+          );
+        },
+      ),
     );
   }
 }
